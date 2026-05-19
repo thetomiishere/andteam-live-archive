@@ -11,6 +11,9 @@ export async function jo() {
     }
 
     try {
+        const skeletonCount = window.innerWidth < 600 ? 15 : 20;
+        renderCardSkeleton(container, skeletonCount);
+        
         setPageDisabled(true);
         const data = await loadJOData();
         joCache = data;
