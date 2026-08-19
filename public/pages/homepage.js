@@ -2,16 +2,16 @@ import { loadHomeData } from '../services/homepageService.js';
 // import { setPageDisabled } from './logistics.js';
 
 const memberImages = {
-    "EJ":       "https://officialsite.cds-jp.online/prod/profile_member/106/150/e55e3a765be64e90927ba01757327289.webp",
-    "FUMA":     "https://officialsite.cds-jp.online/prod/profile_member/106/151/cfb3f3637cf74d998800880a80d7b14d.webp",
-    "K":        "https://officialsite.cds-jp.online/prod/profile_member/106/152/3b0ac49a2141456cb034445048669d02.webp",
-    "NICO":     "https://officialsite.cds-jp.online/prod/profile_member/106/153/99c14925144a4537a0125b955d0c477c.webp",
-    "YUMA":     "https://officialsite.cds-jp.online/prod/profile_member/106/154/4ff9913e087246baa83e0a2f7a0f86dc.webp",
-    "JO":       "https://officialsite.cds-jp.online/prod/profile_member/106/155/e25f9f6985e246fa9a612044ea692170.webp",
-    "HARUA":    "https://officialsite.cds-jp.online/prod/profile_member/106/156/7cde09694be04e588dcd080910a8a62d.webp",
-    "TAKI":     "https://officialsite.cds-jp.online/prod/profile_member/106/157/13383d53a2444dbc82a3ea9f24f214e7.webp",
-    "MAKI":     "https://officialsite.cds-jp.online/prod/profile_member/106/162/491d07d4059d42909828f22569acf5d9.webp",
-    "andTEAM":  "https://officialsite.cds-jp.online/prod/profile_main/106/58/1a0108aadfc34a5ca64b6fced521b96c.webp"
+    "EJ":       "https://officialsite.cds-jp.online/prod/profile_member/106/190/7b2804a7bfcf45b59cb28bed8d774659.webp",
+    "FUMA":     "https://officialsite.cds-jp.online/prod/profile_member/106/191/078269c865234ddc95d821a41187f6e1.webp",
+    "K":        "https://officialsite.cds-jp.online/prod/profile_member/106/192/4535ae1f8fe847d88346a48411bdcd90.webp",
+    "NICO":     "https://officialsite.cds-jp.online/prod/profile_member/106/193/28edf829bc564de28d73ec7c95e22dc5.webp",
+    "YUMA":     "https://officialsite.cds-jp.online/prod/profile_member/106/194/9eda429a71d0434d8985b9c3acafaff9.webp",
+    "JO":       "https://officialsite.cds-jp.online/prod/profile_member/106/195/3f1c58b81ed746e89192a3d68d15c626.webp",
+    "HARUA":    "https://officialsite.cds-jp.online/prod/profile_member/106/196/48b4b83089094e9588a8dcd7846173c9.webp",
+    "TAKI":     "https://officialsite.cds-jp.online/prod/profile_member/106/197/01189b433902496fa8e68987e4c0ab17.webp",
+    "MAKI":     "https://officialsite.cds-jp.online/prod/profile_member/106/198/2e31345081464afa932d815867c51d62.webp",
+    "andTEAM":  "https://officialsite.cds-jp.online/prod/main/106/79/667e0582fdaa45eeaf4bf19d383576a6.webp"
 };
 
 export async function homepage() {

@@ -5,7 +5,7 @@
     overflow: hidden;
     box-shadow: 0 4px 6px var(--shadow-medium);
     transition: transform 0.2s ease;
-    color: var(--text-white);
+    color: var(--text-main);
 
     display: flex;
     flex-direction: column;
@@ -42,13 +42,13 @@
     margin: 5px 0;
     font-size: clamp(0.6rem, 1.5vw, 1.1rem);/* Shrinks font as screen shrinks */
     overflow: hidden;
-    color: var(--text-main);
+    color: var(--text-inverse);
 }
 
 .grid-container .info-date,
 .grid-container .info-ft{
     font-size: clamp(0.5rem, 1.2vw, 0.85rem);
-    color: var(--text-main);
+    color: var(--text-inverse);
     margin-bottom: 10px;
 }
 
@@ -66,8 +66,10 @@
 }
 
 .grid-container .view-btn:hover {
-    color: var(--text-sub);
+    color: var(--text-inverse);
     background: var(--btn-main-hover);
+    border-color: var(--btn-main);
+    border: 1px solid var(--btn-main);
 }
 
 .skeleton-card {

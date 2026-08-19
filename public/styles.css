@@ -1,19 +1,20 @@
 :root {
-  --bg-main: #dad3be;
+  --bg-main: #46002c;
+  --bg-card: #dfdcd4;
   --bg-mute: #ffffff;
   --bg-overlay: rgba(0, 0, 0, 0.5);
   --bg-light:#cccccc;
-  --bg-card: #dddddd;
 
-  --text-main: #000000;/*#516479*/
-  --text-sub: #ffffff;
-  --text-body: #e0e0e0;
-  --text-footer: #9ca3af;
+  --text-main: #dfdcd4;/*#516479*/
+  --text-sub: #dedcd3;
+  --text-inverse: #46002c;
+  --text-body: #dedcd3;
+  --text-footer: #dedcd3;
   --text-white: #ffffff;
   --text-black: #000000;
-
-  --btn-main: #000000;
-  --btn-main-hover: #464444;
+  
+  --btn-main: #46002c;
+  --btn-main-hover: #dfdcd4;
 
   --accent-dark: #1d4ed8;
   --accent-light: #9acbec;
@@ -312,7 +313,7 @@ header.topbar {
 
 .social-links a:hover {
     transform: translateY(-3px);
-    color: var(--text-black);
+    color: var(--text-white);
 }
 
 /* The Grid System */
