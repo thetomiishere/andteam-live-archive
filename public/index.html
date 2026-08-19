@@ -14,14 +14,14 @@
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <h1>MENU</h1>
+            <h1 data-i18n="sb_title">MENU</h1>
             <nav>
                 <div id="sidebarMenu">
                     <div>
-                        <a href="#/home" data-section="home" id="homeBtn">HOME</a>
+                        <a href="#/home" data-section="home" id="homeBtn" data-i18n="sb_home">HOME</a>
                     </div>
                     <div>
-                        <a href="javascript:void(0)" id="toggleLives">VIEW LIVES ▾</a>
+                        <a href="javascript:void(0)" id="toggleLives" data-i18n="sb_live">VIEW LIVES ▾</a>
                     </div>
                     <div id="livesSubmenu" style="display: none; margin-top: 5px;">
                         <div><a href="#/andTEAM" data-section="andTEAM" id="andTEAMBtn">&TEAM</a></div>
@@ -35,6 +35,54 @@
                         <div><a href="#/TAKI" data-section="TAKI" id="takiBtn">TAKI</a></div>
                         <div><a href="#/MAKI" data-section="MAKI" id="makiBtn">MAKI</a></div>
                     </div>
+                    <div>
+                        <a href="https://www.andteam-official.jp/schedule" target="_blank" rel="noopener noreferrer" id="newsBtn" class="external-link">
+                            <span data-i18n="sb_schedule">SCHEDULE</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256" class="external-icon">
+                                <g fill="currentColor" fill-rule="nonzero">
+                                    <g transform="scale(10.66667,10.66667)">
+                                        <path d="M5,3c-1.09306,0 -2,0.90694 -2,2v14c0,1.09306 0.90694,2 2,2h14c1.09306,0 2,-0.90694 2,-2v-7h-2v7h-14v-14h7v-2zM14,3v2h3.58594l-9.29297,9.29297l1.41406,1.41406l9.29297,-9.29297v3.58594h2v-7z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.andteam-official.jp/fanchant" target="_blank" rel="noopener noreferrer" id="newsBtn" class="external-link">
+                            <span data-i18n="sb_fanchant">FAN CHANT</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256" class="external-icon">
+                                <g fill="currentColor" fill-rule="nonzero">
+                                    <g transform="scale(10.66667,10.66667)">
+                                        <path d="M5,3c-1.09306,0 -2,0.90694 -2,2v14c0,1.09306 0.90694,2 2,2h14c1.09306,0 2,-0.90694 2,-2v-7h-2v7h-14v-14h7v-2zM14,3v2h3.58594l-9.29297,9.29297l1.41406,1.41406l9.29297,-9.29297v3.58594h2v-7z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.andteam-official.jp/news" target="_blank" rel="noopener noreferrer" id="newsBtn" class="external-link">
+                            <span data-i18n="sb_news">NEWS</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256" class="external-icon">
+                                <g fill="currentColor" fill-rule="nonzero">
+                                    <g transform="scale(10.66667,10.66667)">
+                                        <path d="M5,3c-1.09306,0 -2,0.90694 -2,2v14c0,1.09306 0.90694,2 2,2h14c1.09306,0 2,-0.90694 2,-2v-7h-2v7h-14v-14h7v-2zM14,3v2h3.58594l-9.29297,9.29297l1.41406,1.41406l9.29297,-9.29297v3.58594h2v-7z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- <div>
+                        <a href="https://www.andteam-official.jp/ticket" target="_blank" rel="noopener noreferrer" id="newsBtn" class="external-link">
+                            TICKET
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256" class="external-icon">
+                                <g fill="currentColor" fill-rule="nonzero">
+                                    <g transform="scale(10.66667,10.66667)">
+                                        <path d="M5,3c-1.09306,0 -2,0.90694 -2,2v14c0,1.09306 0.90694,2 2,2h14c1.09306,0 2,-0.90694 2,-2v-7h-2v7h-14v-14h7v-2zM14,3v2h3.58594l-9.29297,9.29297l1.41406,1.41406l9.29297,-9.29297v3.58594h2v-7z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div> -->
                 </div>
             </nav>
         </aside>
@@ -52,11 +100,11 @@
             <div id="homeSection" class="content" style="display: none;">
                 <div class="table-header">
                     <div class="welcome-container">
-                        <h1 class="welcome-text">Hi! Here's the Weverse live index for</h1>
+                        <h1 class="welcome-text" data-i18n="welcome_text1">Hi! Here's the Weverse live index for</h1>
                         <img class="member-logo" src="https://officialsite.cds-jp.online/prod/logo/106/9c815bcb4b3341ed804b866fefd8f138.webp" alt="LOGO">
-                        <h1 class="welcome-text">made by a fan</h1>
+                        <h1 class="welcome-text" data-i18n="welcome_text2">made by a fan</h1>
                     </div>
-                    <p class="subtitle">Click any photo to view their live. Or click ☰ to view menu</p>
+                    <p class="subtitle" data-i18n="welcome_instruct">Click any photo to view their live. Or click ☰ to view menu</p>
                 </div>
 
                 <div class="member-gallery">
@@ -109,7 +157,7 @@
                     <!-- <h2>&TEAM</h2> -->
                 </div>
                 <div id="andTEAM-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 
@@ -119,7 +167,7 @@
                     <!-- <h3>EJ</h3> -->
                 </div>
                 <div id="ej-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 
@@ -129,7 +177,7 @@
                     <!-- <h3>FUMA</h3> -->
                 </div>
                 <div id="fuma-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 
@@ -139,7 +187,7 @@
                     <!-- <h3>K</h3> -->
                 </div>
                 <div id="k-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 
@@ -149,7 +197,7 @@
                     <!-- <h3>NICHOLAS</h3> -->
                 </div>
                 <div id="nico-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 
@@ -159,7 +207,7 @@
                     <!-- <h3>YUMA</h3> -->
                 </div>
                 <div id="yuma-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 
@@ -169,7 +217,7 @@
                     <!-- <h3>JO</h3> -->
                 </div>
                 <div id="jo-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 
@@ -179,7 +227,7 @@
                     <!-- <h3>HARUA</h3> -->
                 </div>
                 <div id="harua-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 
@@ -189,7 +237,7 @@
                     <!-- <h3>TAKI</h3> -->
                 </div>
                 <div id="taki-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 
@@ -199,7 +247,7 @@
                     <!-- <h3>MAKI</h3> -->
                 </div>
                 <div id="maki-grid" class="grid-container">
-                    <p class="loading">LOADING...</p>
+                    <p class="loading" data-i18n="loading">LOADING...</p>
                 </div>
             </div>
 

@@ -36,12 +36,12 @@
     display: block;
 }
 
-.member-logo {
+/* .member-logo {
     height: auto;
     max-width: 200px;
     margin: 10px 0;
     display: block;
-}
+} */
 
 .member-name {
     font-weight: bold;
@@ -51,12 +51,6 @@
 }
 
 @media (max-width: 600px) {
-    .welcome-container h1 {
-        font-size: 1.2rem;
-    }
-    .member-logo {
-        width: 140px;
-    }
     .member-gallery {
         gap: 8px;
     }

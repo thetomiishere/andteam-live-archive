@@ -1,3 +1,4 @@
+import { t } from './dictionary.js';
 import { loadandTEAMData } from '../services/andTeamService.js';
 import { setPageDisabled, formatDate, renderCardSkeleton } from './logistics.js';
 
@@ -64,7 +65,7 @@ async function renderData(data, container) {
         viewBtn.className = 'view-btn';
         viewBtn.href = item.link;
         viewBtn.target = '_blank';
-        viewBtn.textContent = 'View Details';
+        viewBtn.textContent = t('view_details');
 
         contentDiv.appendChild(title);
         contentDiv.appendChild(dateDiv);

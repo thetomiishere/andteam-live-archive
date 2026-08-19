@@ -1,3 +1,4 @@
+import { t } from '../dictionary.js';
 import { loadYUMAData } from '../../services/individual/yumaService.js';
 import { setPageDisabled, formatDate, renderCardSkeleton } from '../logistics.js';
 
@@ -17,7 +18,6 @@ export async function yuma() {
         setPageDisabled(true);
         const data = await loadYUMAData();
         yumaCache = data;
-        console.log(yumaCache);
         renderData(data, container);
     } catch (err) {
         container.innerHTML = "Error loading data.";
@@ -29,7 +29,7 @@ export async function yuma() {
 async function renderData(data, container) {
     container.innerHTML = '';
     if (!data || !data.length) {
-        container.innerHTML = '<p class="no-data">No content found for this member.</p>';
+        container.innerHTML = `<p class="no-data">${t('no_data')}</p>`;
         return;
     }
 
@@ -65,8 +65,8 @@ async function renderData(data, container) {
         viewBtn.className = 'view-btn';
         viewBtn.href = item.link;
         viewBtn.target = '_blank';
-        viewBtn.textContent = 'View Details';
-
+        viewBtn.textContent = t('view_details');
+        
         contentDiv.appendChild(title);
         contentDiv.appendChild(dateDiv);
         contentDiv.appendChild(ftDiv);

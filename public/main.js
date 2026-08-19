@@ -10,8 +10,10 @@ import { jo } from './pages/individual/jo.js';
 import { harua } from './pages/individual/harua.js';
 import { taki } from './pages/individual/taki.js';
 import { maki } from './pages/individual/maki.js';
+import { ui, t } from './pages/dictionary.js';
 
 document.addEventListener("DOMContentLoaded", () => {
+    applyTranslations();
     const menuToggle = document.getElementById('menuToggle');
     const sidebar = document.querySelector('.sidebar');
     const container = document.querySelector('.container');
@@ -50,6 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('hashchange', handleHashChange);
     window.addEventListener('load', handleHashChange);
 });
+
+export function applyTranslations() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (ui[key]) {
+            el.textContent = ui[key];
+        }
+    });
+    document.documentElement.lang = navigator.language;
+}
 
 function closeSidebar() {
     const sidebar = document.querySelector('.sidebar');
@@ -135,9 +147,5 @@ function showSection(section) {
 
     const activeItem = document.querySelector(`#sidebarMenu a[data-section="${section}"]`);
     if (activeItem) activeItem.classList.add('active');
-    /*
-    const tapeFilePage = document.getElementById('tapeFilePage');
-    if (tapeFilePage) tapeFilePage.style.display = 'none';
-    */
 
 }
