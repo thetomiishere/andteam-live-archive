@@ -29,6 +29,8 @@ const translations = {
         loading: "LOADING...",
         no_data: "No content found for this member.",
         view_details: "View Details",
+        view_chant: "View Fan Chant Guide",
+        view_chantYT: "View on YouTube",
     },
     'zh-TW': {
         sb_title: "MENU",
@@ -44,6 +46,8 @@ const translations = {
         loading: "載入中...",
         no_data: "尚無此成員的內容。",
         view_details: "查看詳情",
+        view_chant: "應援方法",
+        view_chantYT: "YouTube",
     },
     'zh-CN': {
         sb_title: "MENU",
@@ -58,7 +62,9 @@ const translations = {
         welcome_instruct: "点击成员图片查看直播整理，或点击 ☰ 打开菜单",
         loading: "加载中...",
         no_data: "暂无此成员的内容。",
-        view_details: "查看详情"
+        view_details: "查看详情",
+        view_chant: "应援方法",
+        view_chantYT: "YouTube",
     },
     // ja: {
     //     sb_title: "メニュー",

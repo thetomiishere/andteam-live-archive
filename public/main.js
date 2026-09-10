@@ -10,6 +10,7 @@ import { jo } from './pages/individual/jo.js';
 import { harua } from './pages/individual/harua.js';
 import { taki } from './pages/individual/taki.js';
 import { maki } from './pages/individual/maki.js';
+import { chant } from './pages/chant.js';
 import { ui, t } from './pages/dictionary.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -87,6 +88,7 @@ function handleHashChange() {
         case '#/HARUA': showSection('HARUA'); harua(); break;
         case '#/TAKI': showSection('TAKI'); taki(); break;
         case '#/MAKI': showSection('MAKI'); maki(); break;
+        case '#/chant': showSection('chant'); chant(); break;
         default:
             showSection('home');
             homepage();
@@ -101,7 +103,7 @@ function showSection(section) {
         titleElement.textContent = section === 'andTEAM' ? '&TEAM' : section.toUpperCase();
     }
 
-    const sections = ['home', 'andTEAM', 'EJ', 'FUMA', 'K', 'NICO', 'YUMA', 'JO', 'HARUA', 'TAKI', 'MAKI'];
+    const sections = ['home', 'andTEAM', 'EJ', 'FUMA', 'K', 'NICO', 'YUMA', 'JO', 'HARUA', 'TAKI', 'MAKI', 'chant'];
     sections.forEach(id => {
         const element = document.getElementById(`${id}Section`);
         if (!element) return;
