@@ -46,7 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const isHidden = livesSubmenu.style.display === 'none';
             livesSubmenu.style.display = isHidden ? 'block' : 'none';
-            toggleLives.innerText = isHidden ? 'VIEW LIVES ▴' : 'VIEW LIVES ▾';
+            const key = isHidden ? 'sb_live_expand' : 'sb_live';
+            toggleLives.textContent = t(key);
+            toggleLives.setAttribute('data-i18n', key);
         });
     }
     // load correct page on initial load or hash change
@@ -101,6 +103,7 @@ function showSection(section) {
     const titleElement = document.getElementById('pageTitle');
     if (titleElement) {
         titleElement.textContent = section === 'andTEAM' ? '&TEAM' : section.toUpperCase();
+        titleElement.textContent = section === 'chant' ? 'Fan Chant' : section.toUpperCase();
     }
 
     const sections = ['home', 'andTEAM', 'EJ', 'FUMA', 'K', 'NICO', 'YUMA', 'JO', 'HARUA', 'TAKI', 'MAKI', 'chant'];

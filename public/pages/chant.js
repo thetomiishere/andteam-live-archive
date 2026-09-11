@@ -3,9 +3,18 @@ import { loadChant } from '../services/chantService.js';
 import { setPageDisabled, renderCardSkeleton } from './logistics.js';
 
 let chantCache = null;
+let isReversed = false;
 
 export async function chant() {
     const container = document.getElementById('chant-grid');
+
+    const sortBtn = document.getElementById('sortChantBtn');
+    if (sortBtn && !sortBtn.dataset.listenerAttached) {
+        sortBtn.addEventListener('click', toggleSortOrder);
+        sortBtn.dataset.listenerAttached = 'true';
+    }
+    updateSortBtnText();
+
     if (chantCache) {
         renderData(chantCache, container);
         return;
@@ -26,6 +35,21 @@ export async function chant() {
     }
 }
 
+function updateSortBtnText() {
+    const sortBtn = document.getElementById('sortChantBtn');
+    if (!sortBtn) return;
+    sortBtn.textContent = isReversed ? t('sort_desc') : t('sort_asc');
+}
+
+function toggleSortOrder() {
+    isReversed = !isReversed;
+    updateSortBtnText();
+    const container = document.getElementById('chant-grid');
+    if (chantCache) {
+        renderData(chantCache, container);
+    }
+}
+
 async function renderData(data, container) {
     container.innerHTML = '';
     container.style.display = 'block';
@@ -43,7 +67,11 @@ async function renderData(data, container) {
         return acc;
     }, {});
 
-    Object.keys(groupedByAlbum).forEach((album) => {
+    let albums = Object.keys(groupedByAlbum);
+    if (isReversed) {
+        albums.reverse();
+    }
+    albums.forEach((album) => {
         const items = groupedByAlbum[album];
 
         const section = document.createElement('div');
